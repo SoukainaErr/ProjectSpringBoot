@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "06f39cc2-9138-4b79-85e9-ad3fc77dcabb",
+		"name": "testApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/Produits/2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "239775af-93dc-40ef-9643-0827e3ad22b4",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits",
+						"2"
+					]
+				},
+				"description": "Get a product by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d19ff9bd-96c2-43fc-a547-5b0a3fa8cdaf",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Get all products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "34c03b9c-e19a-407b-b561-2415db13a8c4",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Create a new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/SortingProducts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1a5567fe-8802-406c-a47d-37957545700b",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/SortingProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"SortingProducts"
+					]
+				},
+				"description": "Sorting Products by Alphabetical Order"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9098/SortingProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9098/SortingProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9098",
+					"path": [
+						"SortingProducts"
+					]
+				},
+				"description": "Getting the products' list by alphabetical order via the circuit breaker"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9098/Produits/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9098/Produits/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9098",
+					"path": [
+						"Produits",
+						"2"
+					]
+				},
+				"description": "Getting a product by Id via the circuit breaker"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/AdminProduits",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a72877fc-8d45-46dd-a1a4-3a7b18f973df",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/AdminProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				},
+				"description": "Calcul de marge"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits/1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4439de0b-68ea-4f81-b7ed-caddcc60996d",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits",
+						"1"
+					]
+				},
+				"description": "Deleting product id 1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "39d15bad-3b4e-4650-a716-ecc598886db0",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Just testing the delete query"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/test/produits/400",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fe3e91de-6261-41a2-b39c-93e7e555b7e3",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nom\": \"Bureau\",\r\n        \"prix\": 800\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/test/produits/400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"test",
+						"produits",
+						"400"
+					]
+				},
+				"description": "Getting the products which price greater than 400"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cbb6edee-ac8a-4994-b7b6-61a09e5fe0b6",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login Admin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1fec17ca-1288-4579-b5f6-afe1733bfca7",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Get products' list after login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2823e51c-788c-4ce2-8ef6-fe531c089048",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "USER",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "USER",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login User"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
